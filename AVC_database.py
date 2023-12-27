@@ -1,3 +1,4 @@
+import os
 import mysql.connector
 import streamlit as st
 import cv2
@@ -34,10 +35,25 @@ toll_plazas = {
 }
 
 #Establish a connection to MySQL Server
+#mydb = mysql.connector.connect(
+#    host="127.0.0.1",
+#    user="root",
+#    database="avc_system"
+#)
+
+#mycursor = mydb.cursor()
+#print("Connection Established")
+
+# Set your environment variables
+DB_HOST = os.environ.get("DB_HOST")
+DB_USER = os.environ.get("DB_USER")
+DB_DATABASE = os.environ.get("DB_DATABASE")
+
+# Establish a connection to MySQL Server
 mydb = mysql.connector.connect(
-    host="127.0.0.1",
-    user="root",
-    database="avc_system"
+    host=DB_HOST,
+    user=DB_USER,
+    database=DB_DATABASE
 )
 
 mycursor = mydb.cursor()
