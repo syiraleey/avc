@@ -1,4 +1,4 @@
-opencv-python==4.8.1.78
+opencv-python-headless==4.8.1.78
 streamlit==1.27.2
 ultralytics==8.0.222
 mysql-connector-python==8.2.0
