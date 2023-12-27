@@ -6,7 +6,7 @@ import math
 import tempfile
 
 # Load YOLO model
-model = YOLO("../project fyp/best (1).pt")
+model = YOLO("best (1).pt")
 
 # Class names
 classNames = ['Class 0', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5', 'Alert']
