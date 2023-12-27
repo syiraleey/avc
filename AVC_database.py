@@ -63,6 +63,19 @@ mydb = mysql.connector.connect(
 mycursor = mydb.cursor()
 print("Connection Established")
 
+# SQL statement to create the vehicleclassdetection table
+create_table_sql = """
+CREATE TABLE IF NOT EXISTS vehicleclassdetection (
+    detection_id INT AUTO_INCREMENT PRIMARY KEY,
+    TimeDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+    vehicleClass VARCHAR(7),
+    TollFare VARCHAR(7)
+);
+"""
+
+# Execute the SQL statement to create the table
+mycursor.execute(create_table_sql)
+
 # CREATE STREAMLIT APP
 
 def main():
