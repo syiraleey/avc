@@ -46,6 +46,7 @@ toll_plazas = {
 
 # Set your environment variables
 DB_HOST = os.environ.get("DB_HOST")
+DB_PORT = os.environ.get("DB_PORT")
 DB_USER = os.environ.get("DB_USER")
 DB_PASSWORD = os.environ.get("DB_PASSWORD")
 DB_DATABASE = os.environ.get("DB_DATABASE")
@@ -53,6 +54,7 @@ DB_DATABASE = os.environ.get("DB_DATABASE")
 # Establish a connection to MySQL Server
 mydb = mysql.connector.connect(
     host=DB_HOST,
+    port=DB_PORT,
     user=DB_USER,
     password=DB_PASSWORD,
     database=DB_DATABASE
